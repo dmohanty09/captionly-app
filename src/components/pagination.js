@@ -4,7 +4,7 @@ function Pagination (props) {
           <div>
               { props.total.map((n) => (
                 <Button key={n} onClick={(e) => props.setPageN(n)}>
-                {n}
+                {n === props.pageN || n}
               </Button>
               ))}
           </div>

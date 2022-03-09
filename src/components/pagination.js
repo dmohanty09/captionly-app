@@ -2,9 +2,11 @@ import { Button } from 'react-foundation';
 function Pagination (props) {
 	return (
           <div>
-              <Button onClick={(e) => props.setPageN(props.pageN + 1)}>
-                {props.pageN + 1}
+              { props.total.map((n) => (
+                <Button key={n} onClick={(e) => props.setPageN(n)}>
+                {n}
               </Button>
+              ))}
           </div>
 		);
 }

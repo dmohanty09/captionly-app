@@ -30,7 +30,7 @@ function App() {
         <Search query={query} setQuery={setQuery} queryInput={queryInput} setQueryInput={setQueryInput}/>
       </header>
       <Gallery captions={captions} pageN={pageN}/>
-      <Pagination pageN={pageN} setPageN={setPageN}/>
+      <Pagination pageN={pageN} setPageN={setPageN} total={Array.from(Array(Math.ceil(captions.length/16)).keys())} />
     </div>
   );
 }

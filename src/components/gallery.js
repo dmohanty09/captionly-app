@@ -9,8 +9,9 @@ function Gallery (props) {
 	            		<iframe id={"ytplayer_" + caption.video_web_id}
 	            		type="text/html"
 	            		title={caption.video_web_id}
-	            		src={'https://www.youtube.com/embed/' + caption.video_web_id + '?start=' + parseInt(caption.timestamp)}
-	            		frameBorder="0"></iframe><div>{caption.text}</div>
+	            		src={'https://www.youtube.com/embed/' + caption.video_web_id + '?modestbranding=1&start=' + parseInt(caption.timestamp)}
+	            		frameBorder="0"
+	            		allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe><div>{caption.text}</div>
 	          		</Cell>)
 	        	)}
 	        </Grid>

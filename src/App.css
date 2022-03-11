@@ -17,13 +17,24 @@
   margin-top: 10px;
 }
 
+.container {
+   height: 70vh;
+   margin: 0em;
+}
+
+.scrollableContent {
+   height: 80vh;
+   margin: 0em;
+   overflow-y: scroll;
+}
+
 .App-header {
   background-color: black;
-  /*min-height: 100vh;*/
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  /*max-height: 5vh;*/
+  /*display: flex;*/
+  /*flex-direction: row;*/
+  /*align-items: center;*/
+  /*justify-content: center;*/
   font-size: calc(10px + 2vmin);
   color: white;
 }

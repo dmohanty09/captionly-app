@@ -29,6 +29,10 @@
    overflow-y: scroll;
 }
 
+.captionText {
+  text-align: left;
+}
+
 .App-header {
   background-color: black;
   /*max-height: 5vh;*/

@@ -12,7 +12,7 @@ function Gallery (props) {
 	            		title={caption.video_web_id}
 	            		src={'https://www.youtube.com/embed/' + caption.video_web_id + '?modestbranding=1&start=' + parseInt(caption.timestamp)}
 	            		frameBorder="0"
-	            		allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe><div><Button onClick={(e)=>props.setSelectedVideo(caption)}>{caption.timestamp}</Button> {caption.text}</div>
+	            		allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe><div className='captionText'><Button onClick={(e)=>props.setSelectedVideo(caption)}>{caption.timestamp}</Button> {caption.text}</div>
 	          		</Cell>)
 	        	)}
 	        </Grid>

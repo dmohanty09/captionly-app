@@ -18,6 +18,7 @@ function App() {
   const [query, setQuery] = useState('');
   const [queryInput, setQueryInput] = useState('');
   const [pageN, setPageN] = useState(0);
+  const [selectedVideo, setSelectedVideo] = useState({'video_web_id': 'iHsb4lXXO9I', 'timestamp':'0'});
   
   useEffect(() => {
     setPageN(0);
@@ -33,11 +34,16 @@ function App() {
       <Grid className='container'>
         <Cell small={8} large={8}>
            <FlexVideo isWidescreen isVimeo>
-              <iframe src="//player.vimeo.com/video/60122989" width="400" height="225" frameBorder="0" allowFullScreen/>
+              <iframe id={"ytplayer_" + selectedVideo.video_web_id}
+                  type="text/html"
+                  title={selectedVideo.video_web_id}
+                  src={'https://www.youtube.com/embed/' + selectedVideo.video_web_id + '?modestbranding=1&start=' + parseInt(selectedVideo.timestamp)}
+                  frameBorder="0"
+                  allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
             </FlexVideo>
             <Pagination pageN={pageN} setPageN={setPageN} total={Array.from(Array(Math.ceil(captions.length/16)).keys())} />
         </Cell>
-        <Cell className='scrollableContent' small={4} large={4}><Gallery captions={captions} pageN={pageN}/></Cell>
+        <Cell className='scrollableContent' small={4} large={4}><Gallery selectedVideo={selectedVideo} setSelectedVideo={setSelectedVideo} captions={captions} pageN={pageN}/></Cell>
       </Grid>
     </div>
   );

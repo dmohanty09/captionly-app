@@ -37,7 +37,7 @@ function App() {
               <iframe id={"ytplayer_" + selectedVideo.video_web_id}
                   type="text/html"
                   title={selectedVideo.video_web_id}
-                  src={'https://www.youtube.com/embed/' + selectedVideo.video_web_id + '?modestbranding=1&start=' + parseInt(selectedVideo.timestamp)}
+                  src={'https://www.youtube.com/embed/' + selectedVideo.video_web_id + '?autoplay=1&modestbranding=1&start=' + parseInt(selectedVideo.timestamp)}
                   frameBorder="0"
                   allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
             </FlexVideo>

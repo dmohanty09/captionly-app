@@ -1,7 +1,7 @@
 function Search (props) {
 	return (
 		<div className="button-basics-example">
-          <div className="input-group">
+          <div className="input-group search-group">
             <input className="input-group-field"
             	   type="text"
             	   onKeyPress={(e) => e.key === 'Enter' && props.setQuery(props.queryInput)}

@@ -33,6 +33,14 @@
   text-align: left;
 }
 
+.vcell {
+  border-bottom: 2px solid #eee;
+}
+
+.search-group {
+  margin-bottom: 0px;
+}
+
 .App-header {
   background-color: black;
   /*max-height: 5vh;*/

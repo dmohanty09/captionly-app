@@ -6,7 +6,7 @@ function Gallery (props) {
 		<div className="grid-block-example">
 	        <Grid upOnSmall={1} upOnMedium={1} upOnLarge={1}>
 	        	{props.captions.slice(props.pageN * pageSize, (props.pageN * pageSize) + pageSize).map((caption, index) => 
-	        		(<Cell key={index}>
+	        		(<Cell className='vcell' key={index}>
 	            		<iframe id={"ytplayer_" + caption.video_web_id}
 	            		type="text/html"
 	            		title={caption.video_web_id}

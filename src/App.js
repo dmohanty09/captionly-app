@@ -32,7 +32,7 @@ function App() {
         <Search query={query} setQuery={setQuery} queryInput={queryInput} setQueryInput={setQueryInput}/>
       </header>
       <Grid className='container'>
-        <Cell small={8} large={8}>
+        <Cell className='vview' small={8} large={8}>
            <FlexVideo isWidescreen isVimeo>
               <iframe id={"ytplayer_" + selectedVideo.video_web_id}
                   type="text/html"

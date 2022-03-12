@@ -37,6 +37,10 @@
   border-bottom: 2px solid #eee;
 }
 
+.vview {
+  border-right: 1px solid #eee;
+}
+
 .search-group {
   margin-bottom: 0px;
 }

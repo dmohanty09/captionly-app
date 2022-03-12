@@ -7,12 +7,14 @@ function Gallery (props) {
 	        <Grid upOnSmall={1} upOnMedium={1} upOnLarge={1}>
 	        	{props.captions.slice(props.pageN * pageSize, (props.pageN * pageSize) + pageSize).map((caption, index) => 
 	        		(<Cell className='vcell' key={index}>
-	            		<iframe id={"ytplayer_" + caption.video_web_id}
-	            		type="text/html"
-	            		title={caption.video_web_id}
-	            		src={'https://www.youtube.com/embed/' + caption.video_web_id + '?modestbranding=1&start=' + parseInt(caption.timestamp)}
-	            		frameBorder="0"
-	            		allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe><div className='captionText'><Button onClick={(e)=>props.setSelectedVideo(caption)}>{caption.timestamp}</Button> {caption.text}</div>
+	            		<div className='captionText'>
+	            			<figure>
+							    <img src={'https://img.youtube.com/vi/'+ caption.video_web_id +'/default.jpg'}
+							         alt={caption.text}/>
+							    <figcaption>{caption.text}</figcaption>
+							</figure>
+							<Button onClick={(e)=>props.setSelectedVideo(caption)}>{caption.timestamp}</Button>
+	            		</div>
 	          		</Cell>)
 	        	)}
 	        </Grid>
